@@ -10,6 +10,13 @@ load_dotenv()
 # Clear SSL_CERT_FILE if it points to a missing path (prevents httpx SSL errors)
 os.environ.pop("SSL_CERT_FILE", None)
 
+# Ensure the repository root is on sys.path so `src.*` imports work under Streamlit
+import sys
+from pathlib import Path
+_ROOT = Path(__file__).resolve().parent
+if str(_ROOT) not in sys.path:
+    sys.path.insert(0, str(_ROOT))
+
 from config import HISTORY_CSV_PATH, FORECAST_HORIZON_DAYS, OUTPUT_DIR
 from src.forecast_pipeline import run_forecast
 from streamlit_dashboard import render_dashboard
