@@ -1,0 +1,37 @@
+﻿# Python
+.env
+.venv/
+venv/
+__pycache__/
+*.py[cod]
+*.pyo
+*.pyd
+
+# Editor / OS
+.vscode/
+.idea/
+.DS_Store
+Thumbs.db
+
+# Dependencies / build
+dist/
+build/
+*.egg-info/
+
+# Data / outputs / caches
+forecast_output/
+data/*.csv
+.cache/
+.huggingface/
+models/
+model.safetensors
+*.safetensors
+
+# Virtual environments
+.env
+venv/
+.venv/
+
+# Logs
+*.log
+
