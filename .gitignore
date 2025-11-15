@@ -23,7 +23,6 @@ forecast_output/
 data/*.csv
 .cache/
 .huggingface/
-models/
 model.safetensors
 *.safetensors
 
