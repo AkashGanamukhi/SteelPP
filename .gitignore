@@ -19,8 +19,6 @@ build/
 *.egg-info/
 
 # Data / outputs / caches
-forecast_output/
-data/*.csv
 .cache/
 .huggingface/
 model.safetensors
